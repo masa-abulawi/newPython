@@ -574,3 +574,285 @@ thisdict = {
 # # another way
 # mydict = dict(thisdict)
 # print(mydict)
+
+
+# //////////////////////
+# if elif else
+
+# age = 20
+# if age < 13:
+#   print("Child")
+# elif age < 18:
+#   print("Teenager")
+# else:
+#   print("Adult")
+
+
+# pass :The pass statement is a null operation
+
+# score = 85
+# if score > 90:
+#   pass
+
+
+# Match Statement
+
+
+# day = 4
+# match day:
+#   case 6:
+#     print("Saturday")
+#   case 7:
+#     print("Sunday")
+#   case _: #The value _ will always match
+#     print("Weekend")
+
+# -----------
+# month = 5
+# day = 4
+# match day:
+#   case 1 | 2 | 3 | 4 | 5: #character | as an or operator
+#     print("weekday")
+#   case 6 | 7 if month == 5: #You can add if statements
+#     print("weekends!")
+
+
+# ////////////////////
+# While Loops , break , continue , else
+# i = 1
+# while i < 6:
+#   print(i)
+#   if i == 3:
+#     break # or  continue , else
+#   i += 1
+
+
+# //////////////////////
+# # For Loops
+# # 1.Looping Through a String
+# for x in "banana":
+#   print(x)
+
+# ////  break  and continue
+# fruits = ["apple", "banana", "cherry"]
+# for x in fruits:
+#   if x == "banana":
+#     break # or continue
+#   print(x)
+
+
+# ///////  range()
+# for x in range(6):
+#   print(x)
+# for x in range(2, 6):
+#   print(x)
+# for x in range(2, 30, 3):
+#   print(x)
+
+
+# /////Else in For Loop
+
+# for x in range(6):
+#     if x == 3:
+#         break
+#     print(x)
+# else:
+#     print("Finally finished!")
+
+
+# #   ////// Nested Loops
+# adj = ["red", "big", "tasty"]
+# fruits = ["apple", "banana", "cherry"]
+
+# for x in adj:
+#     for y in fruits:
+#         print(x, y)
+
+
+# /////pass
+# for x in [0, 1, 2]:
+#   pass
+
+
+# ////////////////////////////////////
+# # Function
+# # parameter and argument
+# def my_function(name): # name is a parameter
+#   print("Hello", name)
+
+# my_function("Emil") # "Emil" is an argument
+
+
+# //////
+# Sending a (list )as an argument:
+
+# def my_function(fruits):
+#     for fruit in fruits:
+#         print(fruit)
+
+
+# my_fruits = ["apple", "banana", "cherry"]
+# my_function(my_fruits)
+
+
+# # Sending a (dictionary) as an argument:
+# def my_function(person):
+#     print("Name:", person["name"])
+#     print("Age:", person["age"])
+
+
+# my_person = {"name": "mas", "age": 25}
+# my_function(my_person)
+
+
+# ///////////////////
+# Positional-Only Arguments
+# With , /, you will get an error if you try to use keyword arguments:
+
+# def my_function(name, /):
+#   print("Hello", name)
+
+# my_function(name = "Emil") #with ,/ & without name
+
+
+# /////// Keyword-Only Arguments
+
+# def person(*, name, age):
+#     print(name, age)
+# person(name="Masa", age=17) # specify that a function
+# person("Masa", 17) # error
+
+
+# /////Arguments before / are positional-only, and arguments after * are keyword-only
+
+
+# /////////////////
+# 1. *args Accept many positional arguments
+# Becomes a tuple
+
+# def add(*numbers):
+#     print(numbers)   # tuple
+# add(1, 2, 3)
+
+
+# # 1.2 Unpacking a list with *
+# def add(a, b, c):
+#     print(a + b + c)
+
+# numbers = [1, 2, 3]
+
+# add(*numbers)
+
+
+# \\\\\
+# 2. **kwargs Accept many keyword arguments
+# Becomes a dictionary
+
+# def person(**data):
+#     print(data)
+# person(name="Masa", age=17)
+
+
+# # 2.2 Unpacking a dictionary with **
+# def hello(fname, lname):
+#     print(fname, lname)
+
+# person = {
+#     "fname": "Masa",
+#     "lname": "Abulawi"
+# }
+
+# hello(**person)
+
+# /////////////////////////
+
+
+# # nonlocal -> modify outer function variable
+
+# # global -> modify global variable
+# x = "Global"
+
+
+# def outer():
+#     x = "Enclosing"
+
+#     def inner():
+#         nonlocal x
+#         x = "Changed by inner"
+
+#         y = "Local"
+#         print("Inside inner:")
+#         print("x =", x)
+#         print("y =", y)
+
+#     inner()
+
+#     print("\nInside outer:")
+#     print("x =", x)
+
+
+# outer()
+
+# print("\nOutside functions:")
+# print("x =", x)
+
+
+# \\\\\\\\\\\\\\\
+# Decorator
+# def welcome(func):
+
+#     def wrapper():
+#         print("Welcome!")
+#         func()
+#     return wrapper
+
+# @welcome  #Decorator
+# def masa():
+#     print("I am Masa")
+# masa()
+
+
+# //////////
+# lambda arguments: expression , Can have many arguments
+# Common with:
+# map()
+# filter()
+# sorted()
+
+# square = lambda x: x * x #== def square(x):  return x * x
+# print(square(4))
+
+
+# # //////////// recursive 1: Countdown 2: Factorial 3: Fibonacci 4: Sum of List 5: Find Maximum in List
+# print(factorial(5))
+# def factorial(n):
+#     # Base case: stop at 0 or 1
+#     if n == 0 or n == 1:
+#         return 1
+#     else:
+#         return n * factorial(n - 1)  # recursive step
+# print(factorial(5))
+
+# ///////////
+# # Generator( next , send , close)
+# def simple():
+#     name = yield "Enter your name:"
+#     print("Hello", name)
+
+# gen = simple()
+# print(next(gen))
+# gen.send("masa")
+# gen.close()
+
+
+# ////////////////////////////////
+# Python Lists
+cars = ["Ford", "Volvo", "BMW"]
+cars.append("Honda")     # add
+cars[1] = "Toyota"       # edit
+cars.pop(0)              # remove
+
+for car in cars:
+    print(car)
+
+print(len(cars))
