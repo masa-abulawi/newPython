@@ -536,11 +536,11 @@
 
 # Python Dictionaries
 #  do not allow duplicates
-thisdict = {
-    "one": "1",
-    "two": "2",
-    "three": 3
-}
+# thisdict = {
+#     "one": "1",
+#     "two": "2",
+#     "three": 3
+# }
 # x = thisdict["one"]
 # print(x)
 # x = thisdict.get("two")
@@ -846,13 +846,182 @@ thisdict = {
 
 
 # ////////////////////////////////
-# Python Lists
-cars = ["Ford", "Volvo", "BMW"]
-cars.append("Honda")     # add
-cars[1] = "Toyota"       # edit
-cars.pop(0)              # remove
+# # Python Lists
+# cars = ["Ford", "Volvo", "BMW"]
+# cars.append("Honda")     # add
+# cars[1] = "Toyota"       # edit
+# cars.pop(0)              # remove
 
-for car in cars:
-    print(car)
+# for car in cars:
+#     print(car)
 
-print(len(cars))
+# print(len(cars))
+
+
+# ///////////////////////////////////
+# # Python Iterators
+# #  tuple or  Lists, dictionaries, and sets are all iterable objects.
+# mytuple = ("apple", "banana", "cherry")
+# myit = iter(mytuple)
+# # Print the first item
+# print(next(myit))
+
+
+# ////////////////////////////////////
+# 1.module (create new file then import here)
+# import mymodule
+# mymodule.greeting("Masa")
+
+
+# # 2.Re-naming a Module
+# import mymodule as mx
+
+# print(mx.name)
+# print(mx.age)
+# mx.greeting("Masa")
+
+
+# # 3.Import From Module
+# from mymodule import greeting
+# greeting("Masa")
+
+
+# # 4. printing all variables (dir)
+# import mymodule
+# print(dir(mymodule))
+
+
+# ////////////////////////////////////
+# # Python Datetime
+# import datetime
+# x = datetime.datetime.now()
+# print(x)
+# print(x.year)
+# print(x.strftime("%A")) # Full weekday name
+# # Create a specific date
+# date = datetime.datetime(2026, 6, 25)
+
+
+# /////////////////////////////////////
+#  Python JSON
+# JavaScript Object Notation
+
+# # 1.json to python  = json.loads()
+# import json
+# # JSON string
+# data = '{ "name":"Masa", "age":22 }'
+# person = json.loads(data)
+# print(person["name"])
+# print(person["age"])
+# print(person)
+
+# # 2.Python to JSON  = json.dumps()
+# # Python dictionary
+# person = {
+#     "name": "Masa",
+#     "age": 22
+# }
+# result = json.dumps(person)
+# print(result)
+
+
+# # 3.
+# import json
+# p = {"name": "masa jamal", "age": 22} #Format the Result ,indentations and line breaks.
+# print(json.dumps(p, indent=5,  sort_keys=True)) #Order the Result
+
+
+# /////////////////////////////////////////////
+# Python RegEx
+# import re
+# words = "i want to travel to the spain"
+# toSearch = re.search("^i.*spain$", words)
+
+# if toSearch:
+#     print("yes")
+#     print(words)
+# else:
+#     print("no match")
+
+
+# //////////////////////////////////////
+# Python PIP
+# import camelcase
+# c = camelcase.CamelCase()
+# txt = "hello world"
+# print(c.hump(txt))
+
+
+# //////////////////////////////////////////
+
+# try:
+#   print("Hello")
+# except:
+#   print("Something went wrong")
+# else:
+#   print("Nothing went wrong")
+# finally:
+#     print("Program finished")
+
+
+# ///////////////////////////////////////////
+# Placeholders and Modifiers
+# price = 20
+# txt = f"The price is {price} dollars"
+# print(txt)
+# txt = f"The price is {price:.2f} dollars"
+# print(txt)
+# txt = f"The price is {50:.3f} dollars"
+# print(txt)
+# txt = f"The price is {2 * 30} dollars"
+# print(txt)
+# tax = 0.25
+# txt = f"The price is {price + (price * tax)} dollars"
+# print(txt)
+# price = 49
+# txt = f"It is very {'Expensive' if price > 50 else 'Cheap'}"
+# print(txt)
+# fruit = "nablus"
+# txt = f"I love {fruit.upper()}"
+# print(txt)
+# /////////////
+# String format()
+# price = 20
+# txt = "The price is {} dollars"
+# print(txt.format(price))
+# # //
+# price = 49
+# txt = "The price is {:.2f} dollars"
+# print(txt.format(price))
+# # //
+# age =10
+# name = "misk"
+# txt = "His name is {1}. {1} is {0} years old."
+# print(txt.format(age, name))
+# # //
+# myorder = "I have a {carname}, it is a {model}."
+# print(myorder.format(carname="Ford", model="Mustang"))
+
+
+# ///////////////////////////////////////
+# None
+# x = None
+# if x is None:
+#     print("x is none")
+
+# //////////////////////////////////////////
+print("Enter your name:")
+name = input()
+print(f"Hello {name}")
+# ////
+
+# name = input("Enter your name:")
+# print(f"Hello {name}")
+# # ///
+
+# x = input("Enter a number:")
+# y = math.sqrt(float(x))
+# print(f"The square root of {x} is {y}")
+
+
+# //////////////////////////////////////////
