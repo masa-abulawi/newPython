@@ -1023,15 +1023,53 @@
 
 # //////////////////////////////////////////
 # class & object
-class newClass:
-    x = 7
-    y = 8
+# class newClass:
+#     x = 7
+#     y = 8
+# p1 = newClass
+# p2 = newClass
+# p3 = newClass
+# p4=newClass() #object
+# print(p1.x)
+# print(p2.y)
+# print(p3.x)
+# del p1
 
 
-p1 = newClass
-p2 = newClass
-p3 = newClass
+# ///
+# having an empty class
+# class Person:
+#   pass
 
-print(p1.x)
-print(p2.y)
-print(p3.x)
+
+# ///
+# Create a class
+# class Person:
+#   def __init__(self, name, age):
+#     self.name = name
+#     self.age = age
+
+#   def greet(self):
+#     print("Hello, my name is " + self.name)
+
+# # Create an object
+# p1 = Person("John", 36)
+
+# # Call the greet method
+# p1.greet()
+
+# /////////////////////////////////////////
+
+# Create the Car class
+class Car:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def show(self):
+        print(self.brand)
+
+
+# Create an object
+c1 = Car("Ford")
+# Call the show method
+c1.show()
