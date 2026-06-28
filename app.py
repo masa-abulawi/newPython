@@ -1061,15 +1061,42 @@
 # /////////////////////////////////////////
 
 # Create the Car class
-class Car:
-    def __init__(self, brand):
-        self.brand = brand
+# class Car:
+#     def __init__(self, brand):
+#         self.brand = brand
 
-    def show(self):
-        print(self.brand)
+#     def show(self):
+#         print(self.brand)
 
 
-# Create an object
-c1 = Car("Ford")
-# Call the show method
-c1.show()
+# # Create an object
+# c1 = Car("Ford")
+# # Call the show method
+# c1.show()
+
+
+# ////
+# # Create the Student class
+# class Student:
+#   def __init__(self, name, grade):
+#     self.name = name
+#     self.grade = grade
+# #  object
+# s1 = Student("Anna", "A")
+# print(s1.grade)
+# s1.grade = "B"
+# print(s1.grade)
+
+
+# //////
+class Rectangle:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+
+    def area(self):
+        return self.width * self.height
+
+
+r1 = Rectangle(5, 3)
+print(r1.area())
