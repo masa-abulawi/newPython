@@ -1010,10 +1010,7 @@
 #     print("x is none")
 
 # //////////////////////////////////////////
-print("Enter your name:")
-name = input()
-print(f"Hello {name}")
-# ////
+
 
 # name = input("Enter your name:")
 # print(f"Hello {name}")
@@ -1025,3 +1022,16 @@ print(f"Hello {name}")
 
 
 # //////////////////////////////////////////
+# class & object
+class newClass:
+    x = 7
+    y = 8
+
+
+p1 = newClass
+p2 = newClass
+p3 = newClass
+
+print(p1.x)
+print(p2.y)
+print(p3.x)
