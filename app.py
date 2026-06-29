@@ -1089,14 +1089,122 @@
 
 
 # //////
-class Rectangle:
-    def __init__(self, width, height):
-        self.width = width
-        self.height = height
+# # Class Methods
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
 
-    def area(self):
-        return self.width * self.height
+#     def area(self):
+#         return self.width * self.height
 
 
-r1 = Rectangle(5, 3)
-print(r1.area())
+# r1 = Rectangle(5, 3)
+# print(r1.area())
+
+
+# ////
+# Inheritance
+
+# # Create the Animal class
+# class Animal:
+#   def __init__(self, name):
+#     self.name = name
+#   def speak(self):
+#     print(self.name)
+# # Create the Dog class (inherits from Animal)
+# class Dog(Animal):
+#   pass
+# # Create an object
+# d1 = Dog("Rex")
+# d1.speak()
+
+
+# ///////
+# Encapsulation
+# class ScoreBoard :
+#   def __init__(self , score ):
+#      self.__score=score
+#   def get_score(self):
+#      return  self.__score
+# # Create an object
+# s1 = ScoreBoard(0)
+# print(s1.get_score())
+
+
+# ///////////////////////////////////////////////////
+# Python File
+
+#   Open a File
+# f = open("demofile.txt")
+# print(f.read())
+
+
+#  Using the with statement
+
+# with open("demofile.txt") as f:
+#     print(f.read())
+
+
+#  Close Files
+
+# f = open("demofile.txt")
+# print(f.readline())
+# f.close()
+
+#    Read Only Parts of the File
+# with open("demofile.txt") as f:
+#     print(f.read(9))
+
+# Read Lines
+# with open("demofile.txt") as f:
+#     print(f.readline())
+#     print(f.readline())
+#     print(f.readline())
+
+
+# By looping through the lines of the file:
+# with open("demofile.txt") as f:
+#     for x in f:
+#         print(x)
+
+
+# ///////////////////////////////////////////////////////////
+
+# Write to an Existing File
+# with open("demofile.txt", "a") as f:
+#     f.write("Now the file has more content!")
+
+# with open("demofile.txt") as f:
+#     print(f.read())
+
+
+# Overwrite Existing Content
+
+# with open("demofile.txt", "w") as f:
+#     f.write("Woops! I have deleted the content!")
+
+# with open("demofile.txt") as f:
+#     print(f.read())
+
+
+# Create a New File (x  - a - w)
+# f = open("myfile.txt", "x")
+
+
+# Delete a File
+# import os
+# os.remove("myfile.txt")
+
+
+# Check if File exist:
+# import os
+# if os.path.exists("demofile.txt"):
+#     os.remove("demofile.txt")
+# else:
+#     print("The file does not exist")
+
+
+# Delete Folder
+import os
+os.rmdir("New folder")
