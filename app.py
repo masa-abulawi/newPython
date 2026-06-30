@@ -1206,5 +1206,5 @@
 
 
 # Delete Folder
-import os
-os.rmdir("New folder")
+# import os
+# os.rmdir("New folder")

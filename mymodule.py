@@ -1,6 +1,6 @@
-def greeting(name):
-    print("Hello", name)
+# def greeting(name):
+#     print("Hello", name)
 
 
-name = "Masa"
-age = 22
+# name = "Masa"
+# age = 22
