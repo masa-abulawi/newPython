@@ -441,9 +441,153 @@
 #     return False
 
 
-def display():
-    for index, bucket in enumerate(my_list):
-        print(f"{index}: {bucket}")
+# def display():
+#     for index, bucket in enumerate(my_list):
+#         print(f"{index}: {bucket}")
 
 
 # ////////////////////////////////////////////////
+# Tree - Binary Tree - Binary Search Tree
+# class TreeNode :
+#     def __init__ (self,data):
+#         self.data = data
+#         self.left = None
+#         self.right = None
+
+
+# root = TreeNode('R')
+# nodeA = TreeNode('A')
+# nodeB = TreeNode('B')
+# nodeC = TreeNode('C')
+# nodeD = TreeNode('D')
+# nodeE = TreeNode('E')
+# nodeF = TreeNode('F')
+# nodeG = TreeNode('G')
+
+
+# root.left= nodeA # not nodeA = root.left
+# root.right= nodeB
+
+# nodeA.left=nodeC
+# nodeA.right = nodeD
+
+# nodeB.left = nodeE
+# nodeB.right = nodeF
+
+# nodeF.left = nodeG
+
+
+# print(root.right.left.data)
+
+
+# ///////
+# 1.Full Binary Tree (2 child or none):
+# 2.Perfect Binary Tree (2 child , all leaf nodes on the same level )
+# 3.Complete Binary Tree ( filled from left to right)
+# 4.Balanced Tree (has at most 1 in difference between its left and right subtree heights)
+
+
+# Traversal
+# ├── DFS : STACK
+# │      ├── PreOrder (print paarent before child)(Root → Left → Right)
+# │      ├── InOrder (left → Root → Right)
+# │      └── PostOrder (left → Right → Root)
+# └── BFS : (Level by Level) / FIFO QUEUE
+#        └── Level Order
+
+
+# def preOrderTraversal(node):
+#   if node is None:
+#     return
+
+#   print(node.data)
+#   preOrderTraversal(node.left)
+#   preOrderTraversal(node.right)
+
+
+# def inOrderTraversal(node):
+#   if node is None:
+#     return
+
+#   inOrderTraversal(node.left)
+#   print(node.data)
+#   inOrderTraversal(node.right)
+
+
+# def postOrderTraversal(node):
+#   if node is None:
+#     return
+
+#   postOrderTraversal(node.left)
+#   postOrderTraversal(node.right)
+#   print(node.data)
+
+
+# ///////////////////
+# BST (Binary Search Tree) /(Sorted Order)/ left<right
+
+
+# # Search for a Value in a BST:
+
+# def search(node, target):
+#   if node is None:
+#     return None
+#   elif node.data == target:
+#     return node
+#   elif target < node.data:
+#     return search(node.left, target)
+#   else:
+#     return search(node.right, target)
+
+
+# # Insert a Node in a BST:
+
+# def insert(node, data):
+#   if node is None:
+#     return TreeNode(data)
+#   else:
+#     if data < node.data:
+#       node.left = insert(node.left, data)
+#     elif data > node.data:
+#       node.right = insert(node.right, data)
+#   return node
+
+
+# # Find The Lowest Value in a BST Subtree:
+
+# def minValueNode(node):
+#   current = node
+#   while current.left is not None:
+#     current = current.left
+#   return current
+
+
+# # Delete a Node in a BST:
+
+# def delete(node, data):
+#   if not node:
+#     return None
+
+#   if data < node.data:
+#     node.left = delete(node.left, data)
+#   elif data > node.data:
+#     node.right = delete(node.right, data)
+#   else: #we find the num
+
+#     # Node with only one child or no child
+#     if not node.left: #no left (no child or only right child)
+#       temp = node.right
+#       node = None #(delete node)
+#       return temp
+
+
+#     elif not node.right: #no right (no child or only left child)
+#       temp = node.left
+#       node = None
+#       return temp
+
+#     # Node with two children, get the in-order successor
+#     node.data = minValueNode(node.right).data
+#     node.right = delete(node.right, node.data)
+
+#   return node
